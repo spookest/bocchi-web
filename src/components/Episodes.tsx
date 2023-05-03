@@ -6,11 +6,6 @@ import Wallpaper_3 from "../assets/wallpaper_3.jpg";
 import Wallpaper_4 from "../assets/wallpaper_4.jpg";
 
 const Episodes = () => {
-	const [selectedImg, setSelectedImg] = useState(1);
-	const handleImgClick = (index: number) => {
-		setSelectedImg(index);
-	};
-
 	const [currentEpisode, setCurrentEpisode] = useState(1);
 
 	function handleClick(currentEpisode: number) {
@@ -38,7 +33,7 @@ const Episodes = () => {
 											key={episode.id}
 											className={`${
 												currentEpisode === episode.id
-													? "text-blue-500"
+													? "font-bold text-blue-500"
 													: "text-gray-500"
 											}`}
 											onClick={() => handleClick(episode.id)}
@@ -112,29 +107,6 @@ const Episodes = () => {
 					</section>
 				</div>
 			</section>
-
-			<div className="mx-auto max-w-3xl">
-				<div className="relative">
-					<img
-						src={`https://picsum.photos/id/${selectedImg}/800/400`}
-						alt={`image-${selectedImg}`}
-						className="h-auto w-full object-cover"
-					/>
-					<div className="absolute bottom-0 left-0 right-0 mt-2 flex justify-center space-x-2">
-						{[1, 2, 3].map((index) => (
-							<img
-								key={index}
-								src={`https://picsum.photos/id/${index}/100`}
-								alt={`image-${index}`}
-								className={`h-auto w-16 cursor-pointer rounded-full border-4 border-white ${
-									selectedImg === index && "border-blue-500"
-								}`}
-								onClick={() => handleImgClick(index)}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
 		</>
 	);
 };

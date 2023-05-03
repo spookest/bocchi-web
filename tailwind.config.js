@@ -6,7 +6,10 @@ export default {
 			fontFamily: {
 				"noto-sans": "Noto Sans JP, sans-serif;",
 			},
+			screens: {
+				xs: "320px",
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 };
