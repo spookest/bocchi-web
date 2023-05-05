@@ -1,17 +1,6 @@
-import React, { useState } from "react";
-import Hitori from "../assets/characters/hitori.jpg";
-import Nijika from "../assets/characters/nijika.jpg";
-import Ryo from "../assets/characters/ryo.jpg";
-import Kita from "../assets/characters/kita.jpg";
-import { TbBrandTwitter, TbBrandInstagram } from "react-icons/tb";
 import characterData from "../data/characterData";
 
 const Characters = () => {
-	const [currentCharacter, setCurrentCharacter] = useState("");
-
-	function handleClick(currentCharacter: string) {
-		setCurrentCharacter(currentCharacter);
-	}
 	return (
 		<>
 			<section className="text-gray-600">

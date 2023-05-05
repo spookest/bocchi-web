@@ -1,9 +1,5 @@
 import { useState } from "react";
 import episodeData from "../data/episodeData";
-import Wallpaper_1 from "../assets/wallpaper_1.jpg";
-import Wallpaper_2 from "../assets/wallpaper_2.jpg";
-import Wallpaper_3 from "../assets/wallpaper_3.jpg";
-import Wallpaper_4 from "../assets/wallpaper_4.jpg";
 
 const Episodes = () => {
 	const [currentEpisode, setCurrentEpisode] = useState(1);
